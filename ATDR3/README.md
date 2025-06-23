@@ -94,7 +94,7 @@ curl -Uri http://localhost:7000/tarefas -Method POST -Headers @{ "Content-Type" 
    ./gradlew runCliente
    ```
 
-## Technologies Used
+## Tecnologias usadas
 - **Java 21**: Core programming language.
 - **Javalin 6.5.0**: Lightweight web framework.
 - **Gradle 8.5**: Build automation tool.
