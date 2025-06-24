@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.UUID;
 
-public class Controle {
+public class Controller {
     // Lista estática para armazenar usuários em memória
     private static final List<User> users = new ArrayList<>();
 
