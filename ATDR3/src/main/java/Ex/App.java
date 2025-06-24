@@ -1,7 +1,7 @@
 package Ex;
 
 import io.javalin.Javalin;
-import Ex.Controle;
+import Ex.Controller;
 
 public class App {
     public static void main(String[] args) {
@@ -9,15 +9,15 @@ public class App {
 
         app.get("/", ctx -> {
             ctx.contentType("text/html");
-            ctx.result(Controle.getHomePage());
+            ctx.result(Controller.getHomePage());
         });
-        app.get("/hello", Controle::getHello);
-        app.get("/status", Controle::getStatus);
-        app.post("/echo", Controle::postEcho);
-        app.get("/saudacao/{nome}", Controle::getSaudacao);
-        app.post("/tarefas", Controle::criarUsuario);
-        app.get("/tarefas", Controle::getUsuarios);
-        app.get("/tarefas/{id}", Controle::getIdUsuario);
+        app.get("/hello", Controller::getHello);
+        app.get("/status", Controller::getStatus);
+        app.post("/echo", Controller::postEcho);
+        app.get("/saudacao/{nome}", Controller::getSaudacao);
+        app.post("/tarefas", Controller::criarUsuario);
+        app.get("/tarefas", Controller::getUsuarios);
+        app.get("/tarefas/{id}", Controller::getIdUsuario);
 
         app.exception(Exception.class, (e, ctx) -> {
             ctx.status(500).json(new ErrorResponse("Internal server error: " + e.getMessage()));
