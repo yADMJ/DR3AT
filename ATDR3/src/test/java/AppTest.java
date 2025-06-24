@@ -1,4 +1,4 @@
-import Ex.Controle; // Importa a classe de controle que implementa os endpoints
+import Ex.Controller; // Importa a classe de controle que implementa os endpoints
 import io.javalin.Javalin;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
@@ -16,14 +16,14 @@ public class AppTest {
     public static void setup() {
         // Inicializa e inicia o servidor na porta 7000
         app = Javalin.create().start(7000);
-        // Define rotas e os métodos correspondentes da classe Controle
-        app.get("/hello", Controle::getHello);
-        app.get("/status", Controle::getStatus);
-        app.post("/echo", Controle::postEcho);
-        app.get("/saudacao/{nome}", Controle::getSaudacao);
-        app.post("/tarefas", Controle::criarUsuario);
-        app.get("/tarefas", Controle::getUsuarios);
-        app.get("/tarefas/{id}", Controle::getIdUsuario);
+        // Define rotas e os métodos correspondentes da classe Controller
+        app.get("/hello", Controller::getHello);
+        app.get("/status", Controller::getStatus);
+        app.post("/echo", Controller::postEcho);
+        app.get("/saudacao/{nome}", Controller::getSaudacao);
+        app.post("/tarefas", Controller::criarUsuario);
+        app.get("/tarefas", Controller::getUsuarios);
+        app.get("/tarefas/{id}", Controller::getIdUsuario);
         RestAssured.baseURI = "http://localhost:7000";
     }
 
