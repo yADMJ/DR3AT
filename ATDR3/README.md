@@ -35,7 +35,7 @@ Este projeto é uma API REST simples desenvolvida em Java com o framework [Javal
 │   │       
 │   ├── test/
 │   │   ├── java/ex/
-│   │   │   ├── MainTest.java
+│   │   │   ├── AppTest.java
 ```
 
 ## Endpoints
